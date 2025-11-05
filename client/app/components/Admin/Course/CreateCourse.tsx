@@ -33,7 +33,7 @@ const CreateCourse = () => {
 const [createCourse, {isSuccess,error}] = useCreateCourseMutation();
     const [prerequisites, setPrerequisites] = useState([{title:""}]);
 const[courseContent, setCourseContent] = useState([{
-    videourl: "",
+    videoUrl: "",
     title: "",
     description: "",
     videoSection: "Untitled Section",
@@ -55,7 +55,7 @@ const [courseData, setCourseData] = useState({
   prerequisites: [{ title: "" }],
   courseData: [
     {
-      videourl: "",
+      videoUrl: "",
       title: "",
       description: "",
       videoSection: "Untitled Section",
@@ -73,7 +73,7 @@ const formatedPrerequisites = prerequisites.map((item: { title: string }) => ({
 }));
 
 const formatedContent = courseContent.map((item) => ({
-  videourl: item.videourl,
+  videoUrl: item.videoUrl,
   title: item.title,
   description: item.description,
   videoSection: item.videoSection,
