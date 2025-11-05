@@ -77,23 +77,23 @@ const Custom = ({ children }: { children: React.ReactNode }) => {
   }, [isLoading]);
 
   // --- Optional DisableDevtool ---
-  React.useEffect(() => {
-    DisableDevtool({
-      disableMenu: true, // disables right-click
-      disableSelect: true,
-      disableCopy: true,
-      ondevtoolopen(type) {
-        // Replace the entire <body> content
-        document.body.innerHTML = `
-          <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#fee2e2;color:#b91c1c;flex-direction:column;">
-            <h1 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">DevTools Detected!</h1>
-            <p style="font-size:1.2rem;">Please close the developer tools and reload to continue using this page.</p>
-          </div>
-        `;
-        document.body.style.overflow = "hidden"; // prevent scroll
-      },
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   DisableDevtool({
+  //     disableMenu: true, // disables right-click
+  //     disableSelect: true,
+  //     disableCopy: true,
+  //     ondevtoolopen(type) {
+  //       // Replace the entire <body> content
+  //       document.body.innerHTML = `
+  //         <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#fee2e2;color:#b91c1c;flex-direction:column;">
+  //           <h1 style="font-size:2rem;font-weight:bold;margin-bottom:1rem;">DevTools Detected!</h1>
+  //           <p style="font-size:1.2rem;">Please close the developer tools and reload to continue using this page.</p>
+  //         </div>
+  //       `;
+  //       document.body.style.overflow = "hidden"; // prevent scroll
+  //     },
+  //   });
+  // }, []);
   // -------------------------------
 
   // Prevent premature render until theme mounts
