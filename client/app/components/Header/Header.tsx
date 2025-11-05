@@ -158,18 +158,18 @@ const {data}= useSession();
 
         {/* Sidebar Bottom: Profile + Copyright */}
         <div>
-          {user && (
+       
           <div className="flex items-center space-x-3 mb-2 px-4 py-3">
              
             <img
-              src={user?.image?user.image:avatar.src}
+              src={user?.avatar?user.avatar.url:avatar.src}
               alt="User Avatar"
               onClick={handleAvatarClick}
               className={`w-10 h-10 rounded-full border-2 ${user?"border-primary":"border-secondary"} cursor-pointer`}
               />
             
-            <span className="font-medium">{user?.name?user.name:"John Doe"}</span>
-          </div>)}
+            <span className="font-medium">{user?.name?user.name:" Login"}</span>
+          </div>
           <div className="px-4 py-2 border-t border-border">
             <p className="text-sm text-muted-foreground">EDURA © 2025</p>
           </div>
