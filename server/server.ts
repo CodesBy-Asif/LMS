@@ -10,10 +10,7 @@ cloudinary.config({
 })
 
 const PORT = process.env.PORT || 3000;
-connectDB().then(()=>{
+connectDB();
 
-app.listen(PORT, () => {
+export default app;
 
-  console.log(`Server is running on port ${PORT}`);
-});
-})
