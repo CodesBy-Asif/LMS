@@ -19,13 +19,13 @@ interface ITokenOptions {
         expires: new Date(Date.now() + accessTokenExpires * 60* 1000),
         maxAge: accessTokenExpires*60*1000,
         httpOnly: true,
-        sameSite: "lax",
+        sameSite: "none",
     };
   export  const refreshOptions: ITokenOptions = {
         expires: new Date(Date.now() + refresTokenExpires* 24 * 60 * 60 * 1000),
         maxAge: refresTokenExpires*24*60* 60*1000,
         httpOnly: true,
-        sameSite: "lax",
+        sameSite: "none",
     };
 export  const sendToken = (user: IUser, statusCode: number, res: Response) => {
     const acessToken = user.SignAccessToken();
