@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Define CSS variables in root for light mode, and .dark for dark mode */
+:root {
+  /* Fonts */
+  --font-poppins: var(--font-poppins);
+  --font-josefin-sans: var(--font-josefin-sans);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+
+  /* Colors - light mode */
+  --color-background: #f4f5f7;       /* Slightly softer than pure white */
+  --color-foreground: #1f2937;       /* Dark gray text for readability */
+  --color-card: #ffffff;             /* White cards for contrast */
+  --color-muted-foreground: #6b7280; /* Subtle secondary text */
+  --color-border: #d1d5db;           /* Light gray border */
+  --color-sidebar: #f9fafb;          /* Soft sidebar background */
+  --color-accent: #f5f5f5;           /* Soft accent for highlights */
+
+  /* Brand & UI */
+  --color-primary: #f55a2a;          /* Modern orange/red for buttons/links */
+  --color-primary-dark: #d9481f;     /* Darker hover state */
+  --color-secondary: #3b3bd2;        /* Vibrant blue for secondary actions */
+  --color-accent-strong: #1f1f2e;    /* Strong accent for badges/important elements */
+  --color-success: #22c55e;          /* Green for success state */
+  --color-error: #fd0808;            /* Red for errors */
+  --color-warning: #f59e0b;          /* Amber for warnings */
+  --color-info: #3b82f6;             /* Blue for info messages */
+}
+
+.dark {
+  /* Dark mode */
+  --color-background: #121217;       /* Very dark but not black */
+  --color-foreground: #e4e4e7;       /* Soft off-white for main text */
+  --color-card: #1e1f29;             /* Slightly lighter than background for cards */
+  --color-muted-foreground: #9ca3af; /* Subtle secondary text */
+  --color-border: #2c2c3c;           /* Borders and dividers */
+  --color-sidebar: #18181f;          /* Sidebar background */
+  --color-accent: #27272a;           /* Accent background / hover effects */
+
+  /* Brand & UI */
+  --color-primary: #f55a2a;          /* Primary buttons/links */
+  --color-primary-dark: #c43d1a;     /* Hover/active state */
+  --color-secondary: #7c5fff;        /* Secondary buttons/links */
+  --color-accent-strong: #e5e5e7;    /* Highlights, badges */
+  --color-success: #34d399;          /* Success states */
+  --color-error: #fd0808;            /* Error states */
+  --color-warning: #fbbf24;          /* Warning states */
+  --color-info: #60a5fa;             /* Info states */
+}
+
+
+/* Tailwind 4 theme references variables */
+@theme {
+  /* Fonts */
+  --font-poppins: var(--font-poppins);
+  --font-josefin-sans: var(--font-josefin-sans);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+
+  /* Colors */
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-card: var(--color-card);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-border: var(--color-border);
+  --color-sidebar: var(--color-sidebar);
+  --color-accent: var(--color-accent);
+
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary);
+  --color-accent-strong: var(--color-accent-strong);
+  --color-success: var(--color-success);
+  --color-error: var(--color-error);
+  --color-warning: var(--color-warning);
+  --color-info: var(--color-info);
+}
