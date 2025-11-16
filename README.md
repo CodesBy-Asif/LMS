@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-* **Name:** LearnTrack
+* **Name:** Edura
 * **One-liner:** A full-featured LMS platform enabling users to enroll in courses, track progress, leave reviews, and manage content efficiently.
 * **Repo:** [GitHub Repository](https://github.com/CodesBy-Asif/LMS)
 * **Demo:** [Live Demo](https://edura-lms.vercel.app/)
